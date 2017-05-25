@@ -1,13 +1,3 @@
-class String
-    def sentences
-        gsub(/\n|\r/, ' ').split(/\.\s*/)
-    end
-
-    def words
-        scan(/\w[\w\'\-]*/)
-    end
-end
-
 class WordPlay
     def self.best_sentence(sentences, desired_words)
         ranked_sentences = sentences.sort_by do |s|
