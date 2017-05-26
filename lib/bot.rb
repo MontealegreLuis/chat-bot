@@ -1,4 +1,5 @@
 require 'yaml'
+require_relative 'string'
 require_relative 'word_play'
 
 class Bot
