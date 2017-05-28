@@ -1,6 +1,7 @@
 # Chat bot
 
 [![Build Status](https://travis-ci.org/MontealegreLuis/chat-bot.svg?branch=master)](https://travis-ci.org/MontealegreLuis/chat-bot)
+[![Code Climate](https://codeclimate.com/github/MontealegreLuis/chat-bot/badges/gpa.svg)](https://codeclimate.com/github/MontealegreLuis/chat-bot)
 
 Simple chat bot with a command line interface written in Ruby.
 
