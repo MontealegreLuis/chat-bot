@@ -50,5 +50,21 @@ describe Bot do
 
         expect(@writer.knowledge[:responses]['hello']).to include(response)
     end
+
+    it 'knows how to respond with a question to a phrase that includes a wildcard' do
+        bot = Bot.new({:data_file => @file})
+
+        response = bot.response_to('everyone knows programming')
+
+        expect(response).to end_with 'knows programming?'
+    end
+
+    it 'makes a question when someone tries to describe it' do
+        bot = Bot.new({:data_file => @file})
+
+        response = bot.response_to('You are very intelligent')
+
+        expect(response).to end_with 'I am very intelligent?'
+    end
 end
 
