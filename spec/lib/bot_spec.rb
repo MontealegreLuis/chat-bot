@@ -3,10 +3,14 @@ require 'knowledge_writer'
 require 'bot'
 
 describe Bot do
-    before :each do
+    before :all do
         @file = 'test.bot'
         @writer = KnowledgeWriter.new
         @writer.write(@file)
+    end
+
+    after :all do
+        File.delete(@file)
     end
 
     it 'gets a default name if none is provided' do
